@@ -1,0 +1,20 @@
+{
+  "name":"Repeat That Rephren",
+  "description":"A simple extension to repeat the video on specific times",
+  "version":"1",
+  "manifest_version":2,
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+      {
+        "matches": ["https://*.youtube.com/*"],
+        "js": ["script.js"],
+        "css": ["popup.css"]
+      }
+    ],
+  "update_url": "http://www.example.com/update.xml",
+  "permissions": [
+          "storage"
+      ]
+  }
